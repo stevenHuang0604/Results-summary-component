@@ -1,0 +1,194 @@
+:root {
+  --color-primary-red: hsl(0, 100%, 67%);
+  --color-primary--yellow: hsl(39, 100%, 56%);
+  --color-primary--teal: hsl(166, 100%, 37%);
+  --color-primary--blue: hsl(234, 85%, 45%);
+
+  --color-bg-light-blue-slate: hsl(252, 100%, 67%);
+  --color-bg-light-blue-royal: hsl(241, 81%, 54%);
+
+  --color-circle-blue-violet: hsla(256, 72%, 46%, 1);
+  --color-circle-blue-persian: hsla(241, 72%, 46%, 0);
+
+  --color-neutral-white: hsl(0, 0%, 100%);
+  --color-neutral-blue-pale: hsl(221, 100%, 96%);
+  --color-neutral-lavender-light: hsl(241, 100%, 89%);
+  --color-neutral-grey-blue-dark: hsl(224, 30%, 27%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Hanken Grotesk', sans-serif;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  width: 75rem;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 5px 10px 20px 5px var(--color-neutral-blue-pale);
+}
+
+.container > * {
+  width: 50%;
+}
+
+/* Result */
+.result {
+  text-align: center;
+  padding: 5.5rem;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-image: linear-gradient(to bottom, var(--color-bg-light-blue-slate), var(--color-bg-light-blue-royal));
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.2rem;
+}
+
+.result-heading {
+  color: var(--color-neutral-lavender-light);
+}
+
+.result-score {
+  font-size: 1.8rem;
+  border-radius: 50%;
+  width: 18rem;
+  height: 18rem;
+  background-image: linear-gradient(to bottom, var(--color-circle-blue-violet), var(--color-circle-blue-persian));
+  color: var(--color-neutral-lavender-light);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-score span {
+  font-size: 6.4rem;
+  font-weight: 800;
+  color: var(--color-neutral-white);
+}
+
+.result-review {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--color-neutral-white);
+}
+
+.result-detail {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--color-neutral-lavender-light);
+}
+
+/* Summary */
+.summary {
+  padding: 4rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.summary-heading {
+  color: var(--color-neutral-grey-blue-dark);
+}
+
+.callouts {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.callout {
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 1.6rem;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.callout-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.callout-title {
+  color: inherit;
+}
+
+.callout-score {
+  margin-left: auto;
+  color: color-mix(in hsl, var(--color-neutral-grey-blue-dark) 50%, transparent);
+}
+
+.callout-score span {
+  color: var(--color-neutral-grey-blue-dark);
+}
+
+.callout--reaction {
+  color: var(--color-primary-red);
+  background-color: color-mix(in hsl, var(--color-primary-red) 5%, transparent);
+}
+
+.callout--memory {
+  color: var(--color-primary--yellow);
+  background-color: color-mix(in hsl, var(--color-primary--yellow) 5%, transparent);
+}
+
+.callout--verbal {
+  color: var(--color-primary--teal);
+  background-color: color-mix(in hsl, var(--color-primary--teal) 5%, transparent);
+}
+
+.callout--visual {
+  color: var(--color-primary--blue);
+  background-color: color-mix(in hsl, var(--color-primary--blue) 5%, transparent);
+}
+
+.cta {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-neutral-white);
+  background-color: var(--color-neutral-grey-blue-dark);
+  width: 100%;
+  padding: 1.8rem;
+  border: none;
+  border-radius: 360px;
+  margin: 0 auto;
+  transition: all 1s;
+  cursor: pointer;
+}
+
+.cta:hover {
+  background-image: linear-gradient(to bottom, var(--color-bg-light-blue-slate), var(--color-bg-light-blue-royal));
+}
+
+/* Heading */
+.heading-secondary {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
